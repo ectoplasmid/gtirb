@@ -1,4 +1,4 @@
 <map id="gtirb::Section" name="gtirb::Section">
 <area shape="rect" id="node1" title="Represents a named section of the binary." alt="" coords="5,80,113,107"/>
-<area shape="rect" id="node2" title=" " alt="" coords="31,5,87,32"/>
+<area shape="rect" id="node2" href="$classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy." alt="" coords="12,5,107,32"/>
 </map>

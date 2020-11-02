@@ -4,7 +4,7 @@
 <area shape="rect" id="node5" href="$_section_8hpp.html" title="Class gtirb::Section." alt="" coords="317,229,416,256"/>
 <area shape="rect" id="node6" href="$_module_8hpp.html" title="Class gtirb::Module and related functions and types." alt="" coords="275,304,373,331"/>
 <area shape="rect" id="node7" href="$_i_r_8hpp.html" title="Class gtirb::IR." alt="" coords="318,379,381,405"/>
-<area shape="rect" id="node3" href="$_code_block_8hpp.html" title="Classes gtirb::CodeBlock and gtirb::Offset." alt="" coords="55,155,174,181"/>
+<area shape="rect" id="node3" href="$_code_block_8hpp.html" title="Class gtirb::CodeBlock." alt="" coords="55,155,174,181"/>
 <area shape="rect" id="node4" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="189,453,269,480"/>
 <area shape="rect" id="node9" href="$_data_block_8hpp.html" title="Class gtirb::DataBlock." alt="" coords="197,155,315,181"/>
 <area shape="rect" id="node8" href="$_symbol_8hpp.html" title="Class gtirb::Symbol." alt="" coords="93,229,192,256"/>

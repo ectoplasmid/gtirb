@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['displacement_831',['Displacement',['cpp/structgtirb_1_1_offset.html#a1cf7b6a500d2b9b97b72472c6dcf2b3d',1,'gtirb::Offset']]]
+  ['attributes_867',['Attributes',['cpp/structgtirb_1_1_sym_addr_addr.html#ad43cdb1026a4297e87fe773f02d96999',1,'gtirb::SymAddrAddr::Attributes()'],['cpp/structgtirb_1_1_sym_addr_const.html#aaefd261e345f9761d83184fd1f4e15f0',1,'gtirb::SymAddrConst::Attributes()'],['cpp/structgtirb_1_1_sym_stack_const.html#a650de8721d8f733bff433a77ee26b7e7',1,'gtirb::SymStackConst::Attributes()']]]
 ];

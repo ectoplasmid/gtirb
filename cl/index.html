@@ -157,6 +157,7 @@ At the command line.  A new executable may be created from the modified gtirb fi
 <h2><a class=none name="dictionary">The GTIRB/GTIRB dictionary</a></h2>
 <ol>
       <li><a href="#*is-equal-p-verbose-p*"><code>*is-equal-p-verbose-p*</code></a></li>
+      <li><a href="#*preserve-symbolic-expressions*"><code>*preserve-symbolic-expressions*</code></a></li>
       <li><a href="#address"><code>address</code></a></li>
       <li><a href="#address-range"><code>address-range</code></a></li>
       <li><a href="#addressp"><code>addressp</code></a></li>
@@ -200,6 +201,7 @@ At the command line.  A new executable may be created from the modified gtirb fi
       <li><a href="#modules"><code>modules</code></a></li>
       <li><a href="#name"><code>name</code></a></li>
       <li><a href="#offset"><code>offset</code></a></li>
+      <li><a href="#offset"><code>offset</code></a></li>
       <li><a href="#on-address"><code>on-address</code></a></li>
       <li><a href="#payload"><code>payload</code></a></li>
       <li><a href="#preferred-addr"><code>preferred-addr</code></a></li>
@@ -242,6 +244,22 @@ comparison fails for a large object with many nested objects.
 </blockquote>
 
 <!-- End of entry for *IS-EQUAL-P-VERBOSE-P* -->
+
+
+<!-- Entry for *PRESERVE-SYMBOLIC-EXPRESSIONS* -->
+
+<p><br>[Special variable]<br><a class=none name='*preserve-symbolic-expressions*'><b>*preserve-symbolic-expressions*</b></a>
+<blockquote><br>
+
+When true, (setf bytes) preserves symbolic expressions
+intersecting the assigned part of the object.
+
+
+
+
+</blockquote>
+
+<!-- End of entry for *PRESERVE-SYMBOLIC-EXPRESSIONS* -->
 
 
 <!-- Entry for ADDRESS -->
@@ -407,7 +425,7 @@ Find all objects in OBJECT starting at ADDRESS.
 <!-- Entry for AUX-DATA -->
 
 <p><br>[Specialized accessor]<br><a class=none><b>aux-data</b> <i>(object module)</i> =&gt; <i>result</i></a>
-<br><a class=none><tt>(setf (</tt><b>aux-data</b> <i>(object module)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
+<br><a class=none><tt>(setf (</tt><b>aux-data</b> <i>(object module)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a><tt> :after</tt>
 <blockquote><br>
 
 A-list of auxiliary data objects keyed by string name.
@@ -428,7 +446,7 @@ modules and on GTIRB IR instances.
 <!-- Entry for AUX-DATA -->
 
 <p><br>[Specialized accessor]<br><a class=none><b>aux-data</b> <i>(object gtirb)</i> =&gt; <i>result</i></a>
-<br><a class=none><tt>(setf (</tt><b>aux-data</b> <i>(object gtirb)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
+<br><a class=none><tt>(setf (</tt><b>aux-data</b> <i>(object gtirb)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a><tt> :after</tt>
 <blockquote><br>
 
 A-list of auxiliary data objects keyed by string name.
@@ -511,27 +529,12 @@ executable.
 
 <!-- Entry for BLOCKS -->
 
-<p><br>[Generic accessor]<br><a class=none name='blocks'><b>blocks</b> <i>object</i> =&gt; <i>result</i></a>
+<p><br>[Generic accessor]<br><a class=none name='blocks'><b>blocks</b> <i>obj</i> =&gt; <i>result</i></a>
 <br><a class=none><tt>(setf (</tt><b>blocks</b> <i>object</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
 <blockquote><br>
 
-
-
-</blockquote>
-
-<!-- End of entry for BLOCKS -->
-
-
-<!-- Entry for BLOCKS -->
-
-<p><br>[Specialized accessor]<br><a class=none><b>blocks</b> <i>(object byte-interval)</i> =&gt; <i>result</i></a>
-<br><a class=none><tt>(setf (</tt><b>blocks</b> <i>(object byte-interval)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
-<blockquote><br>
-
-Blocks in this byte-interval.
-This list could include <code>code-block</code> or <code>data-block</code> elements (which
-both subclass the <code>gtirb-byte-block</code> class) but not <code>proxy-block</code>
-elements as proxy blocks do not hold bytes.
+List of gtirb-byte-block objects in this object.
+Primitive accessor for byte-interval.
 
 
 
@@ -1227,6 +1230,22 @@ Access the top-level IR of this BYTE-INTERVAL.
 
 <!-- Entry for IR -->
 
+<p><br>[Specialized accessor]<br><a class=none><b>ir</b> <i>(object offset)</i> =&gt; <i>result</i></a>
+<br><a class=none><tt>(setf (</tt><b>ir</b> <i>(object offset)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
+<blockquote><br>
+
+Access the top-level IR of this OFFSET.
+
+
+
+
+</blockquote>
+
+<!-- End of entry for IR -->
+
+
+<!-- Entry for IR -->
+
 <p><br>[Specialized accessor]<br><a class=none><b>ir</b> <i>(object section)</i> =&gt; <i>result</i></a>
 <br><a class=none><tt>(setf (</tt><b>ir</b> <i>(object section)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
 <blockquote><br>
@@ -1510,6 +1529,21 @@ An optional human-readable name for this module.
 </blockquote>
 
 <!-- End of entry for NAME -->
+
+
+<!-- Entry for OFFSET -->
+
+<p><br>[Standard class]<br><a class=none name='offset'><b>offset</b></a>
+<blockquote><br>
+
+Offset into a GTIRB object.
+
+
+
+
+</blockquote>
+
+<!-- End of entry for OFFSET -->
 
 
 <!-- Entry for OFFSET -->
@@ -2183,6 +2217,46 @@ Write a GTIRB IR object to PATH.
 <!-- End of entry for WRITE-GTIRB -->
 
 
+<!-- Entry for (SETF AUX-DATA) -->
+
+<p><br>[Method]<br><a class=none><tt>(setf (</tt><b>aux-data</b> <i>(object module)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
+<blockquote><br>
+
+A-list of auxiliary data objects keyed by string name.
+Aux-Data tables may hold structured or unstructured data.  This data
+may refer to elements of the GTIRB IR through uuids.  Information
+relevant to a particular module will be stored in Aux-Data tables
+accessible from the specific module.  Aux-Data tables only exist on
+modules and on GTIRB IR instances.
+
+
+
+
+</blockquote>
+
+<!-- End of entry for (SETF AUX-DATA) -->
+
+
+<!-- Entry for (SETF AUX-DATA) -->
+
+<p><br>[Method]<br><a class=none><tt>(setf (</tt><b>aux-data</b> <i>(object gtirb)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
+<blockquote><br>
+
+A-list of auxiliary data objects keyed by string name.
+Aux-Data tables may hold structured or unstructured data.  This data
+may refer to elements of the GTIRB IR through uuids.  Information
+relevant to a particular module will be stored in Aux-Data tables
+accessible from the specific module.  Aux-Data tables only exist on
+modules and on GTIRB IR instances.
+
+
+
+
+</blockquote>
+
+<!-- End of entry for (SETF AUX-DATA) -->
+
+
 <!-- Entry for (SETF AUX-DATA-DATA) -->
 
 <p><br>[Method]<br><a class=none><tt>(setf (</tt><b>aux-data-data</b> <i>(obj aux-data)</i><tt>)</tt> <i>new</i><tt>)</tt></a>
@@ -2205,6 +2279,24 @@ Write a GTIRB IR object to PATH.
 </blockquote>
 
 <!-- End of entry for (SETF AUX-DATA-TYPE) -->
+
+
+<!-- Entry for (SETF BLOCKS) -->
+
+<p><br>[Method]<br><a class=none><tt>(setf (</tt><b>blocks</b> <i>(object byte-interval)</i><tt>)</tt> <i>new-value</i><tt>)</tt></a>
+<blockquote><br>
+
+Blocks in this byte-interval.
+This list could include <code>code-block</code> or <code>data-block</code> elements (which
+both subclass the <code>gtirb-byte-block</code> class) but not <code>proxy-block</code>
+elements as proxy blocks do not hold bytes.
+
+
+
+
+</blockquote>
+
+<!-- End of entry for (SETF BLOCKS) -->
 
 
 <!-- Entry for (SETF ENTRY-POINT) -->

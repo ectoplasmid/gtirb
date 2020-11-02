@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index &#8212; gtirb  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -190,9 +190,13 @@
 </li>
         <li><a href="gtirb.symbol.html#gtirb.symbol.Symbol.__init__">(gtirb.symbol.Symbol method)</a>
 </li>
+        <li><a href="gtirb.html#gtirb.SymbolicExpression.__init__">(gtirb.SymbolicExpression method)</a>
+</li>
         <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr.__init__">(gtirb.symbolicexpression.SymAddrAddr method)</a>
 </li>
         <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst.__init__">(gtirb.symbolicexpression.SymAddrConst method)</a>
+</li>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.__init__">(gtirb.symbolicexpression.SymbolicExpression method)</a>
 </li>
         <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst.__init__">(gtirb.symbolicexpression.SymStackConst method)</a>
 </li>
@@ -301,12 +305,24 @@
         <li><a href="gtirb.section.html#gtirb.section.Section.address">(gtirb.section.Section property)</a>
 </li>
       </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.AddrRelGot">AddrRelGot (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.AddrRelGot">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.Adjusted">Adjusted (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.Adjusted">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="gtirb.version.html#gtirb.version.API_VERSION">API_VERSION (in module gtirb.version)</a>
 </li>
       <li><a href="gtirb.util.html#gtirb.util.ListWrapper.append">append() (gtirb.util.ListWrapper method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="gtirb.html#gtirb.Module.ISA.ARM">ARM (gtirb.Module.ISA attribute)</a>
 
       <ul>
@@ -320,6 +336,8 @@
 </li>
       </ul></li>
       <li><a href="gtirb.proto.Symbol_pb2.html#gtirb.proto.Symbol_pb2.Symbol.at_end">at_end (gtirb.proto.Symbol_pb2.Symbol attribute)</a>
+</li>
+      <li><a href="gtirb.proto.SymbolicExpression_pb2.html#gtirb.proto.SymbolicExpression_pb2.SymbolicExpression.attribute_flags">attribute_flags (gtirb.proto.SymbolicExpression_pb2.SymbolicExpression attribute)</a>
 </li>
       <li><a href="gtirb.proto.IR_pb2.html#gtirb.proto.IR_pb2.IR.aux_data">aux_data (gtirb.proto.IR_pb2.IR attribute)</a>
 
@@ -917,6 +935,42 @@
       </ul></li>
       <li><a href="gtirb.util.html#gtirb.util.get_desired_range">get_desired_range() (in module gtirb.util)</a>
 </li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.GotPage">GotPage (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.GotPage">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.GotPageOfst">GotPageOfst (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.GotPageOfst">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.GotRef">GotRef (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.GotRef">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.GotRelAddr">GotRelAddr (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.GotRelAddr">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.GotRelGot">GotRelGot (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.GotRelGot">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.GotRelPC">GotRelPC (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.GotRelPC">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
       <li>
     gtirb
 
@@ -987,6 +1041,8 @@
         <li><a href="gtirb.proto.html#module-gtirb.proto">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     gtirb.proto.AuxData_pb2
 
@@ -1008,8 +1064,6 @@
         <li><a href="gtirb.proto.CFG_pb2.html#module-gtirb.proto.CFG_pb2">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     gtirb.proto.CodeBlock_pb2
 
@@ -1482,6 +1536,30 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.Part0">Part0 (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.Part0">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.Part1">Part1 (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.Part1">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.Part2">Part2 (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.Part2">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.Part3">Part3 (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.Part3">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
       <li><a href="gtirb.symbol.html#gtirb.symbol.Payload">Payload (in module gtirb.symbol)</a>
 </li>
       <li><a href="gtirb.html#gtirb.Module.FileFormat.PE">PE (gtirb.Module.FileFormat attribute)</a>
@@ -1490,6 +1568,14 @@
         <li><a href="gtirb.module.html#gtirb.module.Module.FileFormat.PE">(gtirb.module.Module.FileFormat attribute)</a>
 </li>
       </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute.PltRef">PltRef (gtirb.SymbolicExpression.Attribute attribute)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute.PltRef">(gtirb.symbolicexpression.SymbolicExpression.Attribute attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="gtirb.html#gtirb.Module.ISA.PPC32">PPC32 (gtirb.Module.ISA attribute)</a>
 
       <ul>
@@ -1502,8 +1588,6 @@
         <li><a href="gtirb.module.html#gtirb.module.Module.ISA.PPC64">(gtirb.module.Module.ISA attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="gtirb.proto.Module_pb2.html#gtirb.proto.Module_pb2.Module.preferred_addr">preferred_addr (gtirb.proto.Module_pb2.Module attribute)</a>
 </li>
       <li><a href="gtirb.version.html#gtirb.version.PROTOBUF_VERSION">PROTOBUF_VERSION (in module gtirb.version)</a>
@@ -1686,10 +1770,10 @@
         <li><a href="gtirb.section.html#gtirb.section.Section.size">(gtirb.section.Section property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="gtirb.proto.CFG_pb2.html#gtirb.proto.CFG_pb2.Edge.source_uuid">source_uuid (gtirb.proto.CFG_pb2.Edge attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="gtirb.proto.SymbolicExpression_pb2.html#gtirb.proto.SymbolicExpression_pb2.SymbolicExpression.stack_const">stack_const (gtirb.proto.SymbolicExpression_pb2.SymbolicExpression attribute)</a>
 </li>
       <li><a href="gtirb.serialization.html#gtirb.serialization.StringCodec">StringCodec (class in gtirb.serialization)</a>
@@ -1752,10 +1836,18 @@
         <li><a href="gtirb.util.html#gtirb.util.symbolic_expressions_at">(in module gtirb.util)</a>
 </li>
       </ul></li>
-      <li><a href="gtirb.proto.SymbolicExpression_pb2.html#gtirb.proto.SymbolicExpression_pb2.SymbolicExpression">SymbolicExpression (class in gtirb.proto.SymbolicExpression_pb2)</a>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression">SymbolicExpression (class in gtirb)</a>
 
       <ul>
-        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression">(in module gtirb.symbolicexpression)</a>
+        <li><a href="gtirb.proto.SymbolicExpression_pb2.html#gtirb.proto.SymbolicExpression_pb2.SymbolicExpression">(class in gtirb.proto.SymbolicExpression_pb2)</a>
+</li>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression">(class in gtirb.symbolicexpression)</a>
+</li>
+      </ul></li>
+      <li><a href="gtirb.html#gtirb.SymbolicExpression.Attribute">SymbolicExpression.Attribute (class in gtirb)</a>
+
+      <ul>
+        <li><a href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute">(class in gtirb.symbolicexpression)</a>
 </li>
       </ul></li>
       <li><a href="gtirb.proto.Module_pb2.html#gtirb.proto.Module_pb2.Module.symbols">symbols (gtirb.proto.Module_pb2.Module attribute)</a>
@@ -1985,7 +2077,7 @@
       &copy;2020, Grammatech, Inc.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

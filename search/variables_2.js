@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['key_834',['Key',['cpp/structgtirb_1_1_aux_data_container_1_1_aux_data_raw.html#a98c32696b907bee18a85ec22d25411ca',1,'gtirb::AuxDataContainer::AuxDataRaw::Key()'],['cpp/struct_aux_data_raw.html#ad817f1669fe272c84a2164820800ed6b',1,'AuxDataRaw::Key()']]]
+  ['elementid_869',['ElementId',['cpp/structgtirb_1_1_offset.html#a2da56d330a4b7158ea0c243e61442184',1,'gtirb::Offset']]],
+  ['errorstorage_870',['ErrorStorage',['cpp/classgtirb_1_1_error_or.html#ac1c95a5c7b1d18b8963e9e2efab42229',1,'gtirb::ErrorOr']]]
 ];

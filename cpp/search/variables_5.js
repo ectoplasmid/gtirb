@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['protobuftype_774',['ProtobufType',['../structgtirb_1_1_aux_data_container_1_1_aux_data_raw.html#a9b1ef8ee9fe1ccaa9d22130ee05f6ea3',1,'gtirb::AuxDataContainer::AuxDataRaw::ProtobufType()'],['../struct_aux_data_raw.html#a8995cd66b96181bb50c6767708dd60cb',1,'AuxDataRaw::ProtobufType()']]]
+  ['offset_808',['Offset',['../structgtirb_1_1_sym_stack_const.html#add0779985661665ca4f0e8abd3c20131',1,'gtirb::SymStackConst::Offset()'],['../structgtirb_1_1_sym_addr_const.html#a763f9b2eea15c0c1a1e407b090c6cf24',1,'gtirb::SymAddrConst::Offset()'],['../structgtirb_1_1_sym_addr_addr.html#a86f17d7146a369d39f9514e1a7484388',1,'gtirb::SymAddrAddr::Offset()']]]
 ];

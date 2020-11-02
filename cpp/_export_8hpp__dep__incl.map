@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$_addr_8hpp.html" title="Class gtirb::Addr and related functions." alt="" coords="719,80,798,107"/>
 <area shape="rect" id="node6" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="577,603,657,629"/>
 <area shape="rect" id="node7" href="$_module_8hpp.html" title="Class gtirb::Module and related functions and types." alt="" coords="915,453,1013,480"/>
-<area shape="rect" id="node9" href="$_code_block_8hpp.html" title="Classes gtirb::CodeBlock and gtirb::Offset." alt="" coords="297,304,415,331"/>
+<area shape="rect" id="node9" href="$_code_block_8hpp.html" title="Class gtirb::CodeBlock." alt="" coords="297,304,415,331"/>
 <area shape="rect" id="node14" href="$_byte_interval_8hpp.html" title="Class gtirb::ByteInterval." alt="" coords="245,229,376,256"/>
 <area shape="rect" id="node15" href="$_utility_8hpp.html" title=" " alt="" coords="1139,229,1227,256"/>
 <area shape="rect" id="node16" href="$_c_f_g_8hpp.html" title="Types and operations for interprocedural control flow graphs (CFGs)." alt="" coords="1700,453,1777,480"/>

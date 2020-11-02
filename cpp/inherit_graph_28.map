@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structgtirb_1_1_sym_stack_const.html" title="Represents a symbolic operand of the form &quot;Sym + Offset&quot;, representing an offset from a stack variabl..." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,127,39"/>
+<area shape="rect" id="node2" href="$classgtirb_1_1_sym_attribute_set_1_1const__iterator.html" title="Iterator over Attribute flags." alt="" coords="175,5,341,47"/>
 </map>

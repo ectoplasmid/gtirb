@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['ia32_887',['IA32',['../namespacegtirb.html#a3a3936a9fcf87b0ae27bca9ac7b91b85a50aa92f578dda2d269ba8322de12dc8d',1,'gtirb']]],
-  ['idaprodb32_888',['IdaProDb32',['../namespacegtirb.html#a7e4c1ed3a95c05b68d4b4f6b5d4282b0af61bd36b950eb2948679ce4086e0f28c',1,'gtirb']]],
-  ['idaprodb64_889',['IdaProDb64',['../namespacegtirb.html#a7e4c1ed3a95c05b68d4b4f6b5d4282b0a50c06f7aaa0483040219652e5248e1ec',1,'gtirb']]],
-  ['incorrectversion_890',['IncorrectVersion',['../classgtirb_1_1_i_r.html#a97815f1ff3416a2f4a93f7103e2ec5c5a36443843ca7d3edd003ccca4fabee287',1,'gtirb::IR']]],
-  ['initialized_891',['Initialized',['../namespacegtirb.html#abcbde83fd8333cc5d219967b53e574bca59d87a4758a9d35fbaf6b204341bb399',1,'gtirb']]],
-  ['isdirect_892',['IsDirect',['../group___c_f_g___g_r_o_u_p.html#gga0d810e653d6ebffa07b66e0d16b7ffd1a944cb3659575565b21c0a3bbdde5eb5a',1,'gtirb']]],
-  ['isindirect_893',['IsIndirect',['../group___c_f_g___g_r_o_u_p.html#gga0d810e653d6ebffa07b66e0d16b7ffd1ad100ba83d130bef5ceb9ef2946b79a42',1,'gtirb']]]
+  ['gotpage_926',['GotPage',['../group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html#ggaf355ba250fa93bf7aeea480b6f4e6df5a97c2df15f874dce567b3b0a09e94a8e4',1,'gtirb']]],
+  ['gotpageofst_927',['GotPageOfst',['../group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html#ggaf355ba250fa93bf7aeea480b6f4e6df5ac76789823800f3981a1f8c0ecb114d1a',1,'gtirb']]],
+  ['gotref_928',['GotRef',['../group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html#ggaf355ba250fa93bf7aeea480b6f4e6df5ae18556f6d77d9cd56eeb25c0d4d0926d',1,'gtirb']]],
+  ['gotreladdr_929',['GotRelAddr',['../group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html#ggaf355ba250fa93bf7aeea480b6f4e6df5addcffdf46f1e529181656fe0cb97a5e7',1,'gtirb']]],
+  ['gotrelgot_930',['GotRelGot',['../group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html#ggaf355ba250fa93bf7aeea480b6f4e6df5ab1cf25d9638a505ecd6310dee1a66ddc',1,'gtirb']]],
+  ['gotrelpc_931',['GotRelPC',['../group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html#ggaf355ba250fa93bf7aeea480b6f4e6df5a769214d1ac9be1892c4ded457416bb43',1,'gtirb']]]
 ];

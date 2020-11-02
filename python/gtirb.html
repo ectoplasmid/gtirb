@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gtirb package &#8212; gtirb  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -126,7 +126,7 @@ Used to determine the proper codec for serializing this AuxData.</p></li>
 
 <dl class="py attribute">
 <dt id="gtirb.AuxData.serializer">
-<code class="sig-name descname">serializer</code><em class="property">: typing.ClassVar<span class="p">[</span>Serialization<span class="p">]</span></em><em class="property"> = &lt;gtirb.serialization.Serialization object&gt;</em><a class="headerlink" href="#gtirb.AuxData.serializer" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">serializer</code><em class="property">: typing.ClassVar<span class="p">[</span><a class="reference internal" href="#gtirb.Serialization" title="gtirb.Serialization">Serialization</a><span class="p">]</span></em><em class="property"> = &lt;gtirb.serialization.Serialization object&gt;</em><a class="headerlink" href="#gtirb.AuxData.serializer" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a <a class="reference internal" href="#gtirb.Serialization" title="gtirb.Serialization"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.Serialization</span></code></a> instance, used to
 encode and decode <code class="docutils literal notranslate"><span class="pre">data</span></code> fields of all <code class="docutils literal notranslate"><span class="pre">AuxData</span></code>. See
 <a class="reference internal" href="gtirb.serialization.html#module-gtirb.serialization" title="gtirb.serialization"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gtirb.serialization</span></code></a> for details.</p>
@@ -360,7 +360,7 @@ zeroes in the binary.</p></li>
 <li><p><strong>contents</strong> – The bytes stored in this interval.</p></li>
 <li><p><strong>blocks</strong> – A set of all <a class="reference internal" href="#gtirb.ByteBlock" title="gtirb.ByteBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">ByteBlock</span></code></a>s in this interval.</p></li>
 <li><p><strong>symbolic_expressions</strong> – A mapping, from offset in the interval, to a
-<code class="xref py py-class docutils literal notranslate"><span class="pre">SymbolicExpression</span></code> in the interval.</p></li>
+<a class="reference internal" href="#gtirb.SymbolicExpression" title="gtirb.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymbolicExpression</span></code></a> in the interval.</p></li>
 </ul>
 </dd>
 </dl>
@@ -377,7 +377,7 @@ interval.</p></li>
 <li><p><strong>contents</strong> – The bytes stored in this interval.</p></li>
 <li><p><strong>blocks</strong> – A set of all <a class="reference internal" href="#gtirb.ByteBlock" title="gtirb.ByteBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">ByteBlock</span></code></a>s in this interval.</p></li>
 <li><p><strong>symbolic_expressions</strong> – A mapping, from offset in the interval, to
-a <code class="xref py py-class docutils literal notranslate"><span class="pre">SymbolicExpression</span></code> in the interval.</p></li>
+a <a class="reference internal" href="#gtirb.SymbolicExpression" title="gtirb.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymbolicExpression</span></code></a> in the interval.</p></li>
 <li><p><strong>uuid</strong> – The UUID of this <code class="docutils literal notranslate"><span class="pre">ByteInterval</span></code>,
 or None if a new UUID needs generated via <code class="xref py py-func docutils literal notranslate"><span class="pre">uuid.uuid4()</span></code>.
 Defaults to None.</p></li>
@@ -557,7 +557,7 @@ range of addresses.</p>
 <dd class="field-odd"><p><strong>addrs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">range</span></code>]) – Either a <code class="docutils literal notranslate"><span class="pre">range</span></code> object or a single address.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef('ByteInterval')</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr" title="gtirb.symbolicexpression.SymAddrAddr"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymAddrAddr</span></code></a>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst" title="gtirb.symbolicexpression.SymAddrConst"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymAddrConst</span></code></a>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst" title="gtirb.symbolicexpression.SymStackConst"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymStackConst</span></code></a>]]]</p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef('ByteInterval')</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression" title="gtirb.symbolicexpression.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymbolicExpression</span></code></a>]]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Yields <code class="docutils literal notranslate"><span class="pre">(interval,</span> <span class="pre">offset,</span> <span class="pre">symexpr)</span></code> tuples for every
@@ -1306,7 +1306,7 @@ range of addresses.</p>
 <dd class="field-odd"><p><strong>addrs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">range</span></code>]) – Either a <code class="docutils literal notranslate"><span class="pre">range</span></code> object or a single address.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef('ByteInterval')</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr" title="gtirb.symbolicexpression.SymAddrAddr"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymAddrAddr</span></code></a>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst" title="gtirb.symbolicexpression.SymAddrConst"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymAddrConst</span></code></a>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst" title="gtirb.symbolicexpression.SymStackConst"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymStackConst</span></code></a>]]]</p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef('ByteInterval')</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression" title="gtirb.symbolicexpression.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymbolicExpression</span></code></a>]]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Yields <code class="docutils literal notranslate"><span class="pre">(interval,</span> <span class="pre">offset,</span> <span class="pre">symexpr)</span></code> tuples for every
@@ -1810,7 +1810,7 @@ range of addresses.</p>
 <dd class="field-odd"><p><strong>addrs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">range</span></code>]) – Either a <code class="docutils literal notranslate"><span class="pre">range</span></code> object or a single address.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef('ByteInterval')</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr" title="gtirb.symbolicexpression.SymAddrAddr"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymAddrAddr</span></code></a>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst" title="gtirb.symbolicexpression.SymAddrConst"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymAddrConst</span></code></a>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst" title="gtirb.symbolicexpression.SymStackConst"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymStackConst</span></code></a>]]]</p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef('ByteInterval')</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression" title="gtirb.symbolicexpression.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymbolicExpression</span></code></a>]]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Yields <code class="docutils literal notranslate"><span class="pre">(interval,</span> <span class="pre">offset,</span> <span class="pre">symexpr)</span></code> tuples for every
@@ -2292,7 +2292,7 @@ range of addresses.</p>
 <dd class="field-odd"><p><strong>addrs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">range</span></code>]) – Either a <code class="docutils literal notranslate"><span class="pre">range</span></code> object or a single address.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef('ByteInterval')</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr" title="gtirb.symbolicexpression.SymAddrAddr"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymAddrAddr</span></code></a>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst" title="gtirb.symbolicexpression.SymAddrConst"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymAddrConst</span></code></a>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst" title="gtirb.symbolicexpression.SymStackConst"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymStackConst</span></code></a>]]]</p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Iterable</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.ForwardRef('ByteInterval')</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression" title="gtirb.symbolicexpression.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymbolicExpression</span></code></a>]]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Yields <code class="docutils literal notranslate"><span class="pre">(interval,</span> <span class="pre">offset,</span> <span class="pre">symexpr)</span></code> tuples for every
@@ -2379,8 +2379,8 @@ by the <a class="reference internal" href="#gtirb.AuxData" title="gtirb.AuxData"
 
 <dl class="py class">
 <dt id="gtirb.SymAddrAddr">
-<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">SymAddrAddr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scale</span></em>, <em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol1</span></em>, <em class="sig-param"><span class="n">symbol2</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymAddrAddr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymAddrAddr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">SymAddrAddr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scale</span></em>, <em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol1</span></em>, <em class="sig-param"><span class="n">symbol2</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymAddrAddr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymAddrAddr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression" title="gtirb.symbolicexpression.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymbolicExpression</span></code></a></p>
 <p>Represents a symbolic expression of the form
 “(Sym1 - Sym2) / Scale + Offset”.</p>
 <dl class="field-list simple">
@@ -2417,7 +2417,7 @@ by the <a class="reference internal" href="#gtirb.AuxData" title="gtirb.AuxData"
 
 <dl class="py method">
 <dt id="gtirb.SymAddrAddr.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scale</span></em>, <em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol1</span></em>, <em class="sig-param"><span class="n">symbol2</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymAddrAddr.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymAddrAddr.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scale</span></em>, <em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol1</span></em>, <em class="sig-param"><span class="n">symbol2</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymAddrAddr.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymAddrAddr.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2425,6 +2425,8 @@ by the <a class="reference internal" href="#gtirb.AuxData" title="gtirb.AuxData"
 <li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Constant offset.</p></li>
 <li><p><strong>symbol1</strong> (<a class="reference internal" href="gtirb.symbol.html#gtirb.symbol.Symbol" title="gtirb.symbol.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbol.Symbol</span></code></a>) – Symbol representing the base address.</p></li>
 <li><p><strong>symbol2</strong> (<a class="reference internal" href="gtirb.symbol.html#gtirb.symbol.Symbol" title="gtirb.symbol.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbol.Symbol</span></code></a>) – Symbol to subtract from <code class="docutils literal notranslate"><span class="pre">symbol1</span></code>.</p></li>
+<li><p><strong>attributes</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">SymobolicExpression.Attribute</span></code>s of this
+expression.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -2447,8 +2449,8 @@ by the <a class="reference internal" href="#gtirb.AuxData" title="gtirb.AuxData"
 
 <dl class="py class">
 <dt id="gtirb.SymAddrConst">
-<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">SymAddrConst</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymAddrConst"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymAddrConst" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">SymAddrConst</code><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymAddrConst"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymAddrConst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression" title="gtirb.symbolicexpression.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymbolicExpression</span></code></a></p>
 <p>Represents a symbolic expression of the form “Sym + Offset”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
@@ -2482,12 +2484,14 @@ by the <a class="reference internal" href="#gtirb.AuxData" title="gtirb.AuxData"
 
 <dl class="py method">
 <dt id="gtirb.SymAddrConst.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymAddrConst.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymAddrConst.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymAddrConst.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymAddrConst.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Constant offset.</p></li>
-<li><p><strong>symbol</strong> (<a class="reference internal" href="gtirb.symbol.html#gtirb.symbol.Symbol" title="gtirb.symbol.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbol.Symbol</span></code></a>) – Symbol representing an address.</p></li>
+<li><p><strong>offset</strong> – Constant offset.</p></li>
+<li><p><strong>symbol</strong> – Symbol representing an address.</p></li>
+<li><p><strong>attributes</strong> – <a class="reference internal" href="#gtirb.SymbolicExpression.Attribute" title="gtirb.SymbolicExpression.Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymbolicExpression.Attribute</span></code></a>s of this
+expression.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -2510,8 +2514,8 @@ by the <a class="reference internal" href="#gtirb.AuxData" title="gtirb.AuxData"
 
 <dl class="py class">
 <dt id="gtirb.SymStackConst">
-<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">SymStackConst</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymStackConst"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymStackConst" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">SymStackConst</code><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymStackConst"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymStackConst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression" title="gtirb.symbolicexpression.SymbolicExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbolicexpression.SymbolicExpression</span></code></a></p>
 <p>Represents a symbolic expression of the form “Sym + Offset”,
 representing an offset from a stack variable.</p>
 <dl class="field-list simple">
@@ -2546,12 +2550,14 @@ representing an offset from a stack variable.</p>
 
 <dl class="py method">
 <dt id="gtirb.SymStackConst.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymStackConst.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymStackConst.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">symbol</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymStackConst.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymStackConst.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Constant offset.</p></li>
-<li><p><strong>symbol</strong> (<a class="reference internal" href="gtirb.symbol.html#gtirb.symbol.Symbol" title="gtirb.symbol.Symbol"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.symbol.Symbol</span></code></a>) – Symbol representing a stack variable.</p></li>
+<li><p><strong>offset</strong> – Constant offset.</p></li>
+<li><p><strong>symbol</strong> – Symbol representing a stack variable.</p></li>
+<li><p><strong>attributes</strong> – <a class="reference internal" href="#gtirb.SymbolicExpression.Attribute" title="gtirb.SymbolicExpression.Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymbolicExpression.Attribute</span></code></a>s of this
+expression.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -2671,6 +2677,92 @@ or None. <code class="docutils literal notranslate"><span class="pre">value</spa
 
 </dd></dl>
 
+<dl class="py class">
+<dt id="gtirb.SymbolicExpression">
+<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">SymbolicExpression</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymbolicExpression"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymbolicExpression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class of symbolic expression types.</p>
+<dl class="py class">
+<dt id="gtirb.SymbolicExpression.Attribute">
+<em class="property">class </em><code class="sig-name descname">Attribute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymbolicExpression.Attribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Attributes representing a known property of a symbolic
+expression.</p>
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.AddrRelGot">
+<code class="sig-name descname">AddrRelGot</code><em class="property"> = 8</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.AddrRelGot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.Adjusted">
+<code class="sig-name descname">Adjusted</code><em class="property"> = 4</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.Adjusted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.GotPage">
+<code class="sig-name descname">GotPage</code><em class="property"> = 10</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.GotPage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.GotPageOfst">
+<code class="sig-name descname">GotPageOfst</code><em class="property"> = 11</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.GotPageOfst" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.GotRef">
+<code class="sig-name descname">GotRef</code><em class="property"> = 5</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.GotRef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.GotRelAddr">
+<code class="sig-name descname">GotRelAddr</code><em class="property"> = 9</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.GotRelAddr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.GotRelGot">
+<code class="sig-name descname">GotRelGot</code><em class="property"> = 7</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.GotRelGot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.GotRelPC">
+<code class="sig-name descname">GotRelPC</code><em class="property"> = 6</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.GotRelPC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.Part0">
+<code class="sig-name descname">Part0</code><em class="property"> = 0</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.Part0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.Part1">
+<code class="sig-name descname">Part1</code><em class="property"> = 1</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.Part1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.Part2">
+<code class="sig-name descname">Part2</code><em class="property"> = 2</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.Part2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.Part3">
+<code class="sig-name descname">Part3</code><em class="property"> = 3</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.Part3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gtirb.SymbolicExpression.Attribute.PltRef">
+<code class="sig-name descname">PltRef</code><em class="property"> = 12</em><a class="headerlink" href="#gtirb.SymbolicExpression.Attribute.PltRef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="gtirb.SymbolicExpression.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/symbolicexpression.html#SymbolicExpression.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.SymbolicExpression.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
@@ -2755,7 +2847,7 @@ or None. <code class="docutils literal notranslate"><span class="pre">value</spa
       &copy;2020, Grammatech, Inc.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

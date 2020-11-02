@@ -1,44 +1,46 @@
 <map id="ByteInterval.hpp" name="ByteInterval.hpp">
-<area shape="rect" id="node1" title="Class gtirb::ByteInterval." alt="" coords="2003,5,2134,32"/>
-<area shape="rect" id="node2" href="$_export_8hpp.html" title=" " alt="" coords="173,244,300,271"/>
-<area shape="rect" id="node3" href="$_node_8hpp.html" title="Class gtirb::Node." alt="" coords="665,87,784,114"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,244,97,271"/>
-<area shape="rect" id="node11" title=" " alt="" coords="1459,319,1526,345"/>
-<area shape="rect" id="node15" title=" " alt="" coords="855,319,917,345"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1093,244,1143,271"/>
-<area shape="rect" id="node21" href="$_observer_8hpp.html" title=" " alt="" coords="1369,87,1512,114"/>
-<area shape="rect" id="node22" href="$_symbolic_expression_8hpp.html" title="Types and operations for symbolic expressions." alt="" coords="1131,87,1345,114"/>
-<area shape="rect" id="node26" title=" " alt="" coords="1455,244,1530,271"/>
-<area shape="rect" id="node27" title=" " alt="" coords="1495,169,1563,196"/>
-<area shape="rect" id="node28" title=" " alt="" coords="1689,87,1745,114"/>
-<area shape="rect" id="node29" title=" " alt="" coords="1769,87,1979,114"/>
-<area shape="rect" id="node30" title=" " alt="" coords="2003,80,2134,121"/>
-<area shape="rect" id="node31" title=" " alt="" coords="2158,80,2302,121"/>
-<area shape="rect" id="node32" title=" " alt="" coords="2326,80,2489,121"/>
-<area shape="rect" id="node33" title=" " alt="" coords="2513,80,2675,121"/>
-<area shape="rect" id="node34" title=" " alt="" coords="2699,80,2862,121"/>
-<area shape="rect" id="node35" title=" " alt="" coords="2886,80,3049,121"/>
-<area shape="rect" id="node36" title=" " alt="" coords="3073,80,3251,121"/>
-<area shape="rect" id="node37" title=" " alt="" coords="3276,80,3467,121"/>
-<area shape="rect" id="node38" title=" " alt="" coords="3491,80,3657,121"/>
-<area shape="rect" id="node39" title=" " alt="" coords="3681,80,3859,121"/>
-<area shape="rect" id="node40" title=" " alt="" coords="3883,80,4076,121"/>
-<area shape="rect" id="node41" title=" " alt="" coords="4101,87,4335,114"/>
-<area shape="rect" id="node42" title=" " alt="" coords="4360,80,4511,121"/>
-<area shape="rect" id="node4" href="$_casting_8hpp.html" title="The various casting and type checking operations that apply to gtirb::Node subclasses." alt="" coords="89,169,222,196"/>
-<area shape="rect" id="node7" href="$_context_8hpp.html" title="Class gtirb::Context and related operators." alt="" coords="587,169,721,196"/>
-<area shape="rect" id="node18" title=" " alt="" coords="931,244,1017,271"/>
-<area shape="rect" id="node20" title=" " alt="" coords="886,169,945,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="157,319,226,345"/>
-<area shape="rect" id="node8" href="$_allocator_8hpp.html" title=" " alt="" coords="375,244,517,271"/>
-<area shape="rect" id="node12" title=" " alt="" coords="305,319,371,345"/>
-<area shape="rect" id="node16" title=" " alt="" coords="541,244,732,271"/>
-<area shape="rect" id="node17" title=" " alt="" coords="756,244,907,271"/>
-<area shape="rect" id="node9" title=" " alt="" coords="395,319,481,345"/>
-<area shape="rect" id="node10" title=" " alt="" coords="1044,319,1115,345"/>
-<area shape="rect" id="node13" title=" " alt="" coords="505,319,576,345"/>
-<area shape="rect" id="node14" title=" " alt="" coords="600,319,660,345"/>
-<area shape="rect" id="node23" href="$_addr_8hpp.html" title="Class gtirb::Addr and related functions." alt="" coords="1207,169,1320,196"/>
-<area shape="rect" id="node24" title=" " alt="" coords="1218,244,1293,271"/>
-<area shape="rect" id="node25" title=" " alt="" coords="1317,244,1381,271"/>
+<area shape="rect" id="node1" title="Class gtirb::ByteInterval." alt="" coords="2125,5,2255,32"/>
+<area shape="rect" id="node2" href="$_export_8hpp.html" title=" " alt="" coords="173,259,300,285"/>
+<area shape="rect" id="node3" href="$_node_8hpp.html" title="Class gtirb::Node." alt="" coords="652,87,771,114"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,259,97,285"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1475,333,1542,360"/>
+<area shape="rect" id="node15" title=" " alt="" coords="855,333,917,360"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1093,259,1143,285"/>
+<area shape="rect" id="node21" href="$_observer_8hpp.html" title=" " alt="" coords="1635,87,1777,114"/>
+<area shape="rect" id="node22" href="$_symbolic_expression_8hpp.html" title="Types and operations for symbolic expressions." alt="" coords="1229,87,1444,114"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1491,259,1566,285"/>
+<area shape="rect" id="node29" title=" " alt="" coords="1647,169,1797,211"/>
+<area shape="rect" id="node30" title=" " alt="" coords="1821,177,1889,203"/>
+<area shape="rect" id="node31" title=" " alt="" coords="2005,87,2061,114"/>
+<area shape="rect" id="node32" title=" " alt="" coords="2085,87,2295,114"/>
+<area shape="rect" id="node33" title=" " alt="" coords="2319,80,2450,121"/>
+<area shape="rect" id="node34" title=" " alt="" coords="2474,80,2618,121"/>
+<area shape="rect" id="node35" title=" " alt="" coords="2642,80,2805,121"/>
+<area shape="rect" id="node36" title=" " alt="" coords="2829,80,2991,121"/>
+<area shape="rect" id="node37" title=" " alt="" coords="3015,80,3178,121"/>
+<area shape="rect" id="node38" title=" " alt="" coords="3202,80,3365,121"/>
+<area shape="rect" id="node39" title=" " alt="" coords="3389,80,3567,121"/>
+<area shape="rect" id="node40" title=" " alt="" coords="3592,80,3783,121"/>
+<area shape="rect" id="node41" title=" " alt="" coords="3807,80,3973,121"/>
+<area shape="rect" id="node42" title=" " alt="" coords="3997,80,4175,121"/>
+<area shape="rect" id="node43" title=" " alt="" coords="4199,80,4392,121"/>
+<area shape="rect" id="node44" title=" " alt="" coords="4417,87,4651,114"/>
+<area shape="rect" id="node4" href="$_casting_8hpp.html" title="The various casting and type checking operations that apply to gtirb::Node subclasses." alt="" coords="89,177,222,203"/>
+<area shape="rect" id="node7" href="$_context_8hpp.html" title="Class gtirb::Context and related operators." alt="" coords="571,177,705,203"/>
+<area shape="rect" id="node18" title=" " alt="" coords="931,259,1017,285"/>
+<area shape="rect" id="node20" title=" " alt="" coords="806,177,865,203"/>
+<area shape="rect" id="node5" title=" " alt="" coords="157,333,226,360"/>
+<area shape="rect" id="node8" href="$_allocator_8hpp.html" title=" " alt="" coords="375,259,517,285"/>
+<area shape="rect" id="node12" title=" " alt="" coords="305,333,371,360"/>
+<area shape="rect" id="node16" title=" " alt="" coords="541,259,732,285"/>
+<area shape="rect" id="node17" title=" " alt="" coords="756,259,907,285"/>
+<area shape="rect" id="node9" title=" " alt="" coords="574,333,659,360"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1044,333,1115,360"/>
+<area shape="rect" id="node13" title=" " alt="" coords="395,333,465,360"/>
+<area shape="rect" id="node14" title=" " alt="" coords="489,333,549,360"/>
+<area shape="rect" id="node23" href="$_addr_8hpp.html" title="Class gtirb::Addr and related functions." alt="" coords="1176,177,1289,203"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1313,177,1571,203"/>
+<area shape="rect" id="node28" title=" " alt="" coords="1042,177,1101,203"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1218,259,1293,285"/>
+<area shape="rect" id="node25" title=" " alt="" coords="1317,259,1381,285"/>
 </map>

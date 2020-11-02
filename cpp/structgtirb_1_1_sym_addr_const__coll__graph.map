@@ -1,5 +1,6 @@
 <map id="gtirb::SymAddrConst" name="gtirb::SymAddrConst">
-<area shape="rect" id="node1" title="Represents a symbolic operand of the form &quot;Sym + Offset&quot;." alt="" coords="5,171,161,197"/>
-<area shape="rect" id="node2" href="$classgtirb_1_1_symbol.html" title="Represents a Symbol, which maps a name to an object in the IR." alt="" coords="29,81,138,108"/>
-<area shape="rect" id="node3" title=" " alt="" coords="55,5,111,32"/>
+<area shape="rect" id="node1" title="Represents a symbolic operand of the form &quot;Sym + Offset&quot;." alt="" coords="63,171,219,197"/>
+<area shape="rect" id="node2" href="$classgtirb_1_1_symbol.html" title="Represents a Symbol, which maps a name to an object in the IR." alt="" coords="5,81,115,108"/>
+<area shape="rect" id="node3" href="$classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy." alt="" coords="13,5,107,32"/>
+<area shape="rect" id="node4" href="$classgtirb_1_1_sym_attribute_set.html" title="A class for tracking a set of boolean flags that represent attributes for SymbolicExpressions." alt="" coords="139,81,306,108"/>
 </map>

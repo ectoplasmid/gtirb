@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gtirb.byteinterval &#8212; gtirb  documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -240,10 +240,13 @@
                     <span class="o">%</span> <span class="n">proto_expr</span><span class="o">.</span><span class="n">WhichOneof</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
                 <span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">symbolic_expressions</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="n">i</span><span class="p">:</span> <span class="n">decode_symbolic_expression</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proto_interval</span><span class="o">.</span><span class="n">symbolic_expressions</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">symbolic_expressions</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proto_interval</span><span class="o">.</span><span class="n">symbolic_expressions</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">expr</span> <span class="o">=</span> <span class="n">decode_symbolic_expression</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+            <span class="n">expr</span><span class="o">.</span><span class="n">attributes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span>
+                <span class="n">SymbolicExpression</span><span class="o">.</span><span class="n">Attribute</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">attribute_flags</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">symbolic_expressions</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">expr</span>
 
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proto_interval</span>
 
@@ -291,6 +294,7 @@
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
                     <span class="s2">&quot;Expected sym expr type in interval: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
                 <span class="p">)</span>
+            <span class="n">sym_exp</span><span class="o">.</span><span class="n">attribute_flags</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">attributes</span><span class="p">)</span>
             <span class="n">proto_interval</span><span class="o">.</span><span class="n">symbolic_expressions</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">CopyFrom</span><span class="p">(</span><span class="n">sym_exp</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">proto_interval</span>
@@ -526,7 +530,7 @@
       &copy;2020, Grammatech, Inc.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
