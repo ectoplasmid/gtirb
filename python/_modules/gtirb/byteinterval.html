@@ -51,7 +51,7 @@
 <span class="p">]</span>
 
 
-<div class="viewcode-block" id="ByteInterval"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval">[docs]</a><span class="k">class</span> <span class="nc">ByteInterval</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteInterval"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval">[docs]</a><span class="k">class</span> <span class="nc">ByteInterval</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A contiguous region of bytes in a binary.</span>
 
 <span class="sd">    A ByteInterval defines a relative ordering for a group of</span>
@@ -102,7 +102,7 @@
                 <span class="n">v</span><span class="o">.</span><span class="n">_remove_from_uuid_cache</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_node</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">_local_uuid_cache</span><span class="p">)</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ByteInterval.__init__"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="ByteInterval.__init__"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="o">*</span><span class="p">,</span>
         <span class="n">address</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: typing.Optional[int]</span>
@@ -314,7 +314,7 @@
         <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">value</span><span class="o">.</span><span class="n">byte_intervals</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ByteInterval.deep_eq"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteInterval.deep_eq"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="c1"># Do not move __eq__. See docstring for Node.deep_eq for more info.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">ByteInterval</span><span class="p">):</span>
@@ -361,7 +361,7 @@
             <span class="s2">&quot;)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="ByteInterval.byte_blocks_on"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.byte_blocks_on">[docs]</a>    <span class="k">def</span> <span class="nf">byte_blocks_on</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteInterval.byte_blocks_on"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.byte_blocks_on">[docs]</a>    <span class="k">def</span> <span class="nf">byte_blocks_on</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
         <span class="c1"># type: (typing.Union[int, range]) -&gt; typing.Iterable[ByteBlock]</span>
         <span class="sd">&quot;&quot;&quot;Finds all the byte blocks that overlap an address or range of</span>
 <span class="sd">        addresses.</span>
@@ -371,7 +371,7 @@
 
         <span class="k">return</span> <span class="n">nodes_on</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">byte_blocks</span><span class="p">,</span> <span class="n">addrs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ByteInterval.byte_blocks_at"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.byte_blocks_at">[docs]</a>    <span class="k">def</span> <span class="nf">byte_blocks_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteInterval.byte_blocks_at"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.byte_blocks_at">[docs]</a>    <span class="k">def</span> <span class="nf">byte_blocks_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
         <span class="c1"># type: (typing.Union[int, range]) -&gt; typing.Iterable[ByteBlock]</span>
         <span class="sd">&quot;&quot;&quot;Finds all the byte blocks that begin at an address or range of</span>
 <span class="sd">        addresses.</span>
@@ -381,7 +381,7 @@
 
         <span class="k">return</span> <span class="n">nodes_at</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">byte_blocks</span><span class="p">,</span> <span class="n">addrs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ByteInterval.code_blocks_on"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.code_blocks_on">[docs]</a>    <span class="k">def</span> <span class="nf">code_blocks_on</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteInterval.code_blocks_on"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.code_blocks_on">[docs]</a>    <span class="k">def</span> <span class="nf">code_blocks_on</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
         <span class="c1"># type: (typing.Union[int, range]) -&gt; typing.Iterable[CodeBlock]</span>
         <span class="sd">&quot;&quot;&quot;Finds all the code blocks that overlap an address or range of</span>
 <span class="sd">        addresses.</span>
@@ -391,7 +391,7 @@
 
         <span class="k">return</span> <span class="n">nodes_on</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_blocks</span><span class="p">,</span> <span class="n">addrs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ByteInterval.code_blocks_at"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.code_blocks_at">[docs]</a>    <span class="k">def</span> <span class="nf">code_blocks_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteInterval.code_blocks_at"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.code_blocks_at">[docs]</a>    <span class="k">def</span> <span class="nf">code_blocks_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
         <span class="c1"># type: (typing.Union[int, range]) -&gt; typing.Iterable[CodeBlock]</span>
         <span class="sd">&quot;&quot;&quot;Finds all the code blocks that begin at an address or range of</span>
 <span class="sd">        addresses.</span>
@@ -401,7 +401,7 @@
 
         <span class="k">return</span> <span class="n">nodes_at</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_blocks</span><span class="p">,</span> <span class="n">addrs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ByteInterval.data_blocks_on"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.data_blocks_on">[docs]</a>    <span class="k">def</span> <span class="nf">data_blocks_on</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteInterval.data_blocks_on"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.data_blocks_on">[docs]</a>    <span class="k">def</span> <span class="nf">data_blocks_on</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
         <span class="c1"># type: (typing.Union[int, range]) -&gt; typing.Iterable[DataBlock]</span>
         <span class="sd">&quot;&quot;&quot;Finds all the data blocks that overlap an address or range of</span>
 <span class="sd">        addresses.</span>
@@ -411,7 +411,7 @@
 
         <span class="k">return</span> <span class="n">nodes_on</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_blocks</span><span class="p">,</span> <span class="n">addrs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ByteInterval.data_blocks_at"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.data_blocks_at">[docs]</a>    <span class="k">def</span> <span class="nf">data_blocks_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteInterval.data_blocks_at"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.data_blocks_at">[docs]</a>    <span class="k">def</span> <span class="nf">data_blocks_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span><span class="p">):</span>
         <span class="c1"># type: (typing.Union[int, range]) -&gt; typing.Iterable[DataBlock]</span>
         <span class="sd">&quot;&quot;&quot;Finds all the data blocks that begin at an address or range of</span>
 <span class="sd">        addresses.</span>
@@ -421,7 +421,7 @@
 
         <span class="k">return</span> <span class="n">nodes_at</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_blocks</span><span class="p">,</span> <span class="n">addrs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ByteInterval.symbolic_expressions_at"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.ByteInterval.symbolic_expressions_at">[docs]</a>    <span class="k">def</span> <span class="nf">symbolic_expressions_at</span><span class="p">(</span>
+<div class="viewcode-block" id="ByteInterval.symbolic_expressions_at"><a class="viewcode-back" href="../../gtirb.byteinterval.html#gtirb.byteinterval.ByteInterval.symbolic_expressions_at">[docs]</a>    <span class="k">def</span> <span class="nf">symbolic_expressions_at</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">addrs</span>  <span class="c1"># type: typing.Union[int, range]</span>
     <span class="p">):</span>
         <span class="c1"># type: (...) -&gt; typing.Iterable[SymbolicExpressionElement]</span>

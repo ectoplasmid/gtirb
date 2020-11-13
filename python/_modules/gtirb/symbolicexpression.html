@@ -41,10 +41,10 @@
 <span class="kn">from</span> <span class="nn">.symbol</span> <span class="kn">import</span> <span class="n">Symbol</span>
 
 
-<div class="viewcode-block" id="SymbolicExpression"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymbolicExpression">[docs]</a><span class="k">class</span> <span class="nc">SymbolicExpression</span><span class="p">:</span>
+<div class="viewcode-block" id="SymbolicExpression"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression">[docs]</a><span class="k">class</span> <span class="nc">SymbolicExpression</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Base class of symbolic expression types.&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="SymbolicExpression.Attribute"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymbolicExpression.Attribute">[docs]</a>    <span class="k">class</span> <span class="nc">Attribute</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<div class="viewcode-block" id="SymbolicExpression.Attribute"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.Attribute">[docs]</a>    <span class="k">class</span> <span class="nc">Attribute</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Attributes representing a known property of a symbolic</span>
 <span class="sd">        expression.&quot;&quot;&quot;</span>
 
@@ -64,13 +64,13 @@
         <span class="p">)</span>
         <span class="n">PltRef</span> <span class="o">=</span> <span class="n">SymbolicExpression_pb2</span><span class="o">.</span><span class="n">SEAttributeFlag</span><span class="o">.</span><span class="n">Value</span><span class="p">(</span><span class="s2">&quot;PltRef&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="SymbolicExpression.__init__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymbolicExpression.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="SymbolicExpression.__init__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymbolicExpression.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="nb">set</span><span class="p">(),</span>
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="SymAddrAddr"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrAddr">[docs]</a><span class="k">class</span> <span class="nc">SymAddrAddr</span><span class="p">(</span><span class="n">SymbolicExpression</span><span class="p">):</span>
+<div class="viewcode-block" id="SymAddrAddr"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr">[docs]</a><span class="k">class</span> <span class="nc">SymAddrAddr</span><span class="p">(</span><span class="n">SymbolicExpression</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents a symbolic expression of the form</span>
 <span class="sd">    &quot;(Sym1 - Sym2) / Scale + Offset&quot;.</span>
 
@@ -80,7 +80,7 @@
 <span class="sd">    :ivar ~.symbol2: Symbol to subtract from ``symbol1``.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="SymAddrAddr.__init__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrAddr.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="SymAddrAddr.__init__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">scale</span><span class="p">,</span>  <span class="c1"># type: int</span>
         <span class="n">offset</span><span class="p">,</span>  <span class="c1"># type: int</span>
@@ -125,7 +125,7 @@
         <span class="n">proto_symaddraddr</span><span class="o">.</span><span class="n">symbol2_uuid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol2</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">bytes</span>
         <span class="k">return</span> <span class="n">proto_symaddraddr</span>
 
-<div class="viewcode-block" id="SymAddrAddr.__eq__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrAddr.__eq__">[docs]</a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="SymAddrAddr.__eq__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr.__eq__">[docs]</a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SymAddrAddr</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
@@ -137,7 +137,7 @@
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">attributes</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="SymAddrAddr.__hash__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrAddr.__hash__">[docs]</a>    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SymAddrAddr.__hash__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr.__hash__">[docs]</a>    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
         <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span>
             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol1</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol2</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
@@ -154,7 +154,7 @@
             <span class="s2">&quot;)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="SymAddrAddr.deep_eq"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrAddr.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="SymAddrAddr.deep_eq"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrAddr.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="c1"># Do not move __eq__. See docstring for Node.deep_eq for more info.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SymAddrAddr</span><span class="p">):</span>
@@ -168,14 +168,14 @@
         <span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="SymAddrConst"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrConst">[docs]</a><span class="k">class</span> <span class="nc">SymAddrConst</span><span class="p">(</span><span class="n">SymbolicExpression</span><span class="p">):</span>
+<div class="viewcode-block" id="SymAddrConst"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst">[docs]</a><span class="k">class</span> <span class="nc">SymAddrConst</span><span class="p">(</span><span class="n">SymbolicExpression</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents a symbolic expression of the form &quot;Sym + Offset&quot;.</span>
 
 <span class="sd">    :ivar ~.offset: Constant offset.</span>
 <span class="sd">    :ivar ~.symbol: Symbol representing an address.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="SymAddrConst.__init__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrConst.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="nb">set</span><span class="p">()):</span>
+<div class="viewcode-block" id="SymAddrConst.__init__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="nb">set</span><span class="p">()):</span>
         <span class="c1"># type: (int,Symbol) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param offset: Constant offset.</span>
@@ -205,7 +205,7 @@
             <span class="n">proto_symaddrconst</span><span class="o">.</span><span class="n">symbol_uuid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">bytes</span>
         <span class="k">return</span> <span class="n">proto_symaddrconst</span>
 
-<div class="viewcode-block" id="SymAddrConst.__eq__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrConst.__eq__">[docs]</a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="SymAddrConst.__eq__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst.__eq__">[docs]</a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SymAddrConst</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
@@ -215,7 +215,7 @@
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">attributes</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="SymAddrConst.__hash__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrConst.__hash__">[docs]</a>    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SymAddrConst.__hash__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst.__hash__">[docs]</a>    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
         <span class="k">return</span> <span class="nb">hash</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">uuid</span><span class="p">))</span></div>
 
@@ -228,7 +228,7 @@
             <span class="s2">&quot;)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="SymAddrConst.deep_eq"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymAddrConst.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="SymAddrConst.deep_eq"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymAddrConst.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="c1"># Do not move __eq__. See docstring for Node.deep_eq for more info.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SymAddrConst</span><span class="p">):</span>
@@ -240,7 +240,7 @@
         <span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="SymStackConst"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymStackConst">[docs]</a><span class="k">class</span> <span class="nc">SymStackConst</span><span class="p">(</span><span class="n">SymbolicExpression</span><span class="p">):</span>
+<div class="viewcode-block" id="SymStackConst"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst">[docs]</a><span class="k">class</span> <span class="nc">SymStackConst</span><span class="p">(</span><span class="n">SymbolicExpression</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents a symbolic expression of the form &quot;Sym + Offset&quot;,</span>
 <span class="sd">    representing an offset from a stack variable.</span>
 
@@ -248,7 +248,7 @@
 <span class="sd">    :ivar ~.symbol: Symbol representing a stack variable.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="SymStackConst.__init__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymStackConst.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="nb">set</span><span class="p">()):</span>
+<div class="viewcode-block" id="SymStackConst.__init__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="nb">set</span><span class="p">()):</span>
         <span class="c1"># type: (int,Symbol) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param offset: Constant offset.</span>
@@ -279,7 +279,7 @@
             <span class="n">proto_symstackconst</span><span class="o">.</span><span class="n">symbol_uuid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">bytes</span>
         <span class="k">return</span> <span class="n">proto_symstackconst</span>
 
-<div class="viewcode-block" id="SymStackConst.__eq__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymStackConst.__eq__">[docs]</a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="SymStackConst.__eq__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst.__eq__">[docs]</a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SymStackConst</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
@@ -289,7 +289,7 @@
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">attributes</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="SymStackConst.__hash__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymStackConst.__hash__">[docs]</a>    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SymStackConst.__hash__"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst.__hash__">[docs]</a>    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
         <span class="k">return</span> <span class="nb">hash</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">uuid</span><span class="p">))</span></div>
 
@@ -302,7 +302,7 @@
             <span class="s2">&quot;)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="SymStackConst.deep_eq"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.SymStackConst.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="SymStackConst.deep_eq"><a class="viewcode-back" href="../../gtirb.symbolicexpression.html#gtirb.symbolicexpression.SymStackConst.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="c1"># Do not move __eq__. See docstring for Node.deep_eq for more info.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SymStackConst</span><span class="p">):</span>

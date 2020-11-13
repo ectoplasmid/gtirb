@@ -198,7 +198,7 @@ other codecs if needed.</p></li>
 <dt id="gtirb.serialization.OffsetCodec">
 <em class="property">class </em><code class="sig-prename descclassname">gtirb.serialization.</code><code class="sig-name descname">OffsetCodec</code><a class="reference internal" href="_modules/gtirb/serialization.html#OffsetCodec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.serialization.OffsetCodec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#gtirb.serialization.Codec" title="gtirb.serialization.Codec"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.serialization.Codec</span></code></a></p>
-<p>A Codec for <a class="reference internal" href="gtirb.html#gtirb.Offset" title="gtirb.Offset"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.Offset</span></code></a> objects,
+<p>A Codec for <code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.Offset</span></code> objects,
 containing a UUID and a displacement.</p>
 <dl class="py method">
 <dt id="gtirb.serialization.OffsetCodec.decode">
@@ -288,11 +288,11 @@ other codecs if needed.</p></li>
 <em class="property">class </em><code class="sig-prename descclassname">gtirb.serialization.</code><code class="sig-name descname">Serialization</code><a class="reference internal" href="_modules/gtirb/serialization.html#Serialization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.serialization.Serialization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manages codecs used to serialize and deserialize GTIRB objects.</p>
-<p>The <a class="reference internal" href="gtirb.html#gtirb.Serialization.decode" title="gtirb.Serialization.decode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gtirb.Serialization.decode()</span></code></a> method of
-<a class="reference internal" href="gtirb.html#gtirb.AuxData.serializer" title="gtirb.AuxData.serializer"><code class="xref py py-attr docutils literal notranslate"><span class="pre">gtirb.AuxData.serializer</span></code></a> is called when GTIRB AuxData is loaded via
-<a class="reference internal" href="gtirb.html#gtirb.IR.load_protobuf" title="gtirb.IR.load_protobuf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gtirb.IR.load_protobuf()</span></code></a>, and the <a class="reference internal" href="gtirb.html#gtirb.Serialization.encode" title="gtirb.Serialization.encode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gtirb.Serialization.encode()</span></code></a>
-method of <a class="reference internal" href="gtirb.html#gtirb.AuxData.serializer" title="gtirb.AuxData.serializer"><code class="xref py py-attr docutils literal notranslate"><span class="pre">gtirb.AuxData.serializer</span></code></a> is called when GTIRB AuxData is
-saved to file via <a class="reference internal" href="gtirb.html#gtirb.IR.save_protobuf" title="gtirb.IR.save_protobuf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gtirb.IR.save_protobuf()</span></code></a>. You can alter the
+<p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">gtirb.Serialization.decode()</span></code> method of
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">gtirb.AuxData.serializer</span></code> is called when GTIRB AuxData is loaded via
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">gtirb.IR.load_protobuf()</span></code>, and the <code class="xref py py-meth docutils literal notranslate"><span class="pre">gtirb.Serialization.encode()</span></code>
+method of <code class="xref py py-attr docutils literal notranslate"><span class="pre">gtirb.AuxData.serializer</span></code> is called when GTIRB AuxData is
+saved to file via <code class="xref py py-meth docutils literal notranslate"><span class="pre">gtirb.IR.save_protobuf()</span></code>. You can alter the
 encoding and decoding of AuxData values via
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">gtirb.Serialization.codecs</span></code>. To do this, create a new subclass of
 <a class="reference internal" href="#gtirb.serialization.Codec" title="gtirb.serialization.Codec"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.serialization.Codec</span></code></a> and add it to
@@ -317,7 +317,7 @@ or overridden using this dictionary.</p>
 <dl class="py method">
 <dt id="gtirb.serialization.Serialization.decode">
 <code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw_bytes</span></em>, <em class="sig-param"><span class="n">type_name</span></em>, <em class="sig-param"><span class="n">get_by_uuid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/serialization.html#Serialization.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.serialization.Serialization.decode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decode a <a class="reference internal" href="gtirb.html#gtirb.AuxData" title="gtirb.AuxData"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.AuxData</span></code></a> of the specified type
+<dd><p>Decode a <code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.AuxData</span></code> of the specified type
 from the specified byte stream.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -344,9 +344,9 @@ from the specified byte stream.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>out</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">typing.BinaryIO'&gt;</span></code>) – A binary stream to write bytes to.</p></li>
-<li><p><strong>val</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The <a class="reference internal" href="gtirb.html#gtirb.AuxData" title="gtirb.AuxData"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.AuxData</span></code></a> to encode.</p></li>
+<li><p><strong>val</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The <code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.AuxData</span></code> to encode.</p></li>
 <li><p><strong>type_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The type name of the value encapsulated
-by the <a class="reference internal" href="gtirb.html#gtirb.AuxData" title="gtirb.AuxData"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.AuxData</span></code></a>.</p></li>
+by the <code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.AuxData</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -643,7 +643,7 @@ Caught and handled by the top-level codec methods.</p>
 <em class="property">class </em><code class="sig-prename descclassname">gtirb.serialization.</code><code class="sig-name descname">UnknownData</code><a class="reference internal" href="_modules/gtirb/serialization.html#UnknownData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.serialization.UnknownData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></p>
 <p>This class is a blob of bytes representing data with an unknown type.
-Generated by <a class="reference internal" href="gtirb.html#gtirb.Serialization.decode" title="gtirb.Serialization.decode"><code class="xref py py-func docutils literal notranslate"><span class="pre">gtirb.Serialization.decode()</span></code></a> when it encounters
+Generated by <code class="xref py py-func docutils literal notranslate"><span class="pre">gtirb.Serialization.decode()</span></code> when it encounters
 the name of an unknown codec. Use only at the top level of an auxdata.</p>
 </dd></dl>
 
@@ -687,7 +687,7 @@ the name of an unknown codec. Use only at the top level of an auxdata.</p>
 <li class="toctree-l3"><a class="reference internal" href="gtirb.version.html">gtirb.version module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gtirb.html#module-gtirb">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gtirb.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>

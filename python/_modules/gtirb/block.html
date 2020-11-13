@@ -39,7 +39,7 @@
 <span class="kn">from</span> <span class="nn">.proto</span> <span class="kn">import</span> <span class="n">CodeBlock_pb2</span><span class="p">,</span> <span class="n">DataBlock_pb2</span><span class="p">,</span> <span class="n">ProxyBlock_pb2</span>
 
 
-<div class="viewcode-block" id="Block"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.Block">[docs]</a><span class="k">class</span> <span class="nc">Block</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+<div class="viewcode-block" id="Block"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.Block">[docs]</a><span class="k">class</span> <span class="nc">Block</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The base class for blocks. Symbols may have references to any subclass</span>
 <span class="sd">    of Block.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -64,7 +64,7 @@
         <span class="k">del</span> <span class="n">cache</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="ByteBlock"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.ByteBlock">[docs]</a><span class="k">class</span> <span class="nc">ByteBlock</span><span class="p">(</span><span class="n">Block</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteBlock"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.ByteBlock">[docs]</a><span class="k">class</span> <span class="nc">ByteBlock</span><span class="p">(</span><span class="n">Block</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The base class for blocks that belong to a :class:`ByteInterval` and</span>
 <span class="sd">    store their bytes there.</span>
 
@@ -74,7 +74,7 @@
 <span class="sd">        same offset.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="ByteBlock.__init__"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.ByteBlock.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="ByteBlock.__init__"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.ByteBlock.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="o">*</span><span class="p">,</span>
         <span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>  <span class="c1"># type: int</span>
@@ -110,7 +110,7 @@
         <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">value</span><span class="o">.</span><span class="n">blocks</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ByteBlock.deep_eq"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.ByteBlock.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="ByteBlock.deep_eq"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.ByteBlock.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="c1"># Do not move __eq__. See docstring for Node.deep_eq for more info.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">ByteBlock</span><span class="p">):</span>
@@ -180,7 +180,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span></div>
 
 
-<div class="viewcode-block" id="CfgNode"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.CfgNode">[docs]</a><span class="k">class</span> <span class="nc">CfgNode</span><span class="p">(</span><span class="n">Block</span><span class="p">):</span>
+<div class="viewcode-block" id="CfgNode"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.CfgNode">[docs]</a><span class="k">class</span> <span class="nc">CfgNode</span><span class="p">(</span><span class="n">Block</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The base class for blocks that may appear as vertices in the CFG.&quot;&quot;&quot;</span>
 
     <span class="nd">@property</span>
@@ -198,10 +198,10 @@
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
 
-<div class="viewcode-block" id="DataBlock"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.DataBlock">[docs]</a><span class="k">class</span> <span class="nc">DataBlock</span><span class="p">(</span><span class="n">ByteBlock</span><span class="p">):</span>
+<div class="viewcode-block" id="DataBlock"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.DataBlock">[docs]</a><span class="k">class</span> <span class="nc">DataBlock</span><span class="p">(</span><span class="n">ByteBlock</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents a data object, possibly symbolic.&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="DataBlock.__init__"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.DataBlock.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="DataBlock.__init__"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.DataBlock.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># type: (int, int, typing.Optional[UUID]) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param size: The size of the data object in bytes.</span>
@@ -244,7 +244,7 @@
         <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="CodeBlock"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.CodeBlock">[docs]</a><span class="k">class</span> <span class="nc">CodeBlock</span><span class="p">(</span><span class="n">ByteBlock</span><span class="p">,</span> <span class="n">CfgNode</span><span class="p">):</span>
+<div class="viewcode-block" id="CodeBlock"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.CodeBlock">[docs]</a><span class="k">class</span> <span class="nc">CodeBlock</span><span class="p">(</span><span class="n">ByteBlock</span><span class="p">,</span> <span class="n">CfgNode</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A basic block in the binary.</span>
 
 <span class="sd">    Does not directly store data bytes, which are kept in a</span>
@@ -255,7 +255,7 @@
 <span class="sd">        (e.g. differentiating blocks written in ARM and Thumb).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="CodeBlock.__init__"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.CodeBlock.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="CodeBlock.__init__"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.CodeBlock.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="o">*</span><span class="p">,</span>
         <span class="n">decode_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>  <span class="c1"># type: int</span>
@@ -304,7 +304,7 @@
         <span class="n">proto_block</span><span class="o">.</span><span class="n">decode_mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_mode</span>
         <span class="k">return</span> <span class="n">proto_block</span>
 
-<div class="viewcode-block" id="CodeBlock.deep_eq"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.CodeBlock.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="CodeBlock.deep_eq"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.CodeBlock.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="c1"># Do not move __eq__. See docstring for Node.deep_eq for more info.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">CodeBlock</span><span class="p">):</span>
@@ -324,36 +324,18 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">incoming_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span> <span class="ow">is</span> <span class="kc">None</span>
-            <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span><span class="o">.</span><span class="n">section</span> <span class="ow">is</span> <span class="kc">None</span>
-            <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">module</span> <span class="ow">is</span> <span class="kc">None</span>
-            <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span> <span class="ow">is</span> <span class="kc">None</span>
-        <span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">()</span>
-        <span class="k">return</span> <span class="p">(</span>
-            <span class="n">e</span>
-            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">cfg</span>
-            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">target</span> <span class="o">==</span> <span class="bp">self</span>
-        <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">in_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">outgoing_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span> <span class="ow">is</span> <span class="kc">None</span>
-            <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span><span class="o">.</span><span class="n">section</span> <span class="ow">is</span> <span class="kc">None</span>
-            <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">module</span> <span class="ow">is</span> <span class="kc">None</span>
-            <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span> <span class="ow">is</span> <span class="kc">None</span>
-        <span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">()</span>
-        <span class="k">return</span> <span class="p">(</span>
-            <span class="n">e</span>
-            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">byte_interval</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">cfg</span>
-            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">source</span> <span class="o">==</span> <span class="bp">self</span>
-        <span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">out_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ProxyBlock"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.ProxyBlock">[docs]</a><span class="k">class</span> <span class="nc">ProxyBlock</span><span class="p">(</span><span class="n">CfgNode</span><span class="p">):</span>
+<div class="viewcode-block" id="ProxyBlock"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.ProxyBlock">[docs]</a><span class="k">class</span> <span class="nc">ProxyBlock</span><span class="p">(</span><span class="n">CfgNode</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A placeholder that serves as the endpoint (source or target) of a</span>
 <span class="sd">    :class:`gtirb.Edge`.</span>
 
@@ -368,7 +350,7 @@
 <span class="sd">    an address nor a size.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="ProxyBlock.__init__"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.ProxyBlock.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="ProxyBlock.__init__"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.ProxyBlock.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_module</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: &quot;Module&quot;</span></div>
 
@@ -390,7 +372,7 @@
         <span class="n">proto_proxyblock</span><span class="o">.</span><span class="n">uuid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">bytes</span>
         <span class="k">return</span> <span class="n">proto_proxyblock</span>
 
-<div class="viewcode-block" id="ProxyBlock.deep_eq"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.ProxyBlock.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="ProxyBlock.deep_eq"><a class="viewcode-back" href="../../gtirb.block.html#gtirb.block.ProxyBlock.deep_eq">[docs]</a>    <span class="k">def</span> <span class="nf">deep_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="c1"># type: (typing.Any) -&gt; bool</span>
         <span class="c1"># Do not move __eq__. See docstring for Node.deep_eq for more info.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">ProxyBlock</span><span class="p">):</span>
@@ -422,15 +404,15 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">incoming_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">()</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">cfg</span> <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">target</span> <span class="o">==</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">in_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">outgoing_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">()</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">cfg</span> <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">source</span> <span class="o">==</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ir</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">out_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">ir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
